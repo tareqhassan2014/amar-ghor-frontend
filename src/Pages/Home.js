@@ -11,8 +11,8 @@ const Home = () => {
       <NavigationBar />
       <TopBanner />
       <HelpDesk />
-      <MobileApp />
       <Features />
+      <MobileApp />
       <Footer />
     </>
   );

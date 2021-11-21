@@ -1,13 +1,7 @@
-import { Typography, Box } from "@mui/material";
+import SignIn from "../Components/Authentication/SignIn";
 
 const Login = () => {
-    return (
-        <Box
-        sx={{ display: "flex", justifyContent: "center", alignItems: "center" }}
-      >
-        <Typography variant="h1">Login</Typography>
-      </Box>
-    );
+  return <SignIn />;
 };
 
 export default Login;

@@ -9,13 +9,16 @@ import {
   IconButton,
   useTheme,
   Typography,
+  Avatar,
 } from "@mui/material";
 import SwipeableTemporaryDrawer from "./SideDrawer";
 import { useState } from "react";
+import useAuth from "../Authentication/useAuth";
 
 const NavigationBar = () => {
   //function start here
   const [openDrawer, setOpenDrawer] = useState(false);
+  const { user } = useAuth();
   const theme = useTheme();
 
   const useStyles = makeStyles({
@@ -33,12 +36,10 @@ const NavigationBar = () => {
 
   const classes = useStyles();
 
-
   //return start here
   return (
     <Box sx={{ flexGrow: 1 }}>
       <AppBar position="static">
-
         <Toolbar>
           <IconButton
             size="large"
@@ -52,11 +53,13 @@ const NavigationBar = () => {
             <MenuIcon />
           </IconButton>
 
-          <Typography className={classes.desktopView}>GHOR</Typography>
+          <Typography>GHOR</Typography>
 
           <Box sx={{ flexGrow: 1 }} />
 
-          <Typography className={classes.mobilView}>GHOR</Typography>
+          {user?.email && (
+            <Avatar alt={user?.displayName} src={user?.photoURL} />
+          )}
 
           <Box className={classes.desktopView}>
             <Button component={Link} to="/login" color="inherit">
@@ -66,7 +69,6 @@ const NavigationBar = () => {
               Login
             </Button>
           </Box>
-
         </Toolbar>
       </AppBar>
       <SwipeableTemporaryDrawer
