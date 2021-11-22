@@ -22,7 +22,7 @@ const useFirebase = () => {
 
   const auth = getAuth();
 
-  console.log(user);
+
   //Google Login System
   const signInUsingGoogle = async () => {
     try {

@@ -1,13 +1,13 @@
-import { Typography, Box } from "@mui/material";
+import ColumnGroupingTable from "../Components/dashboard/ColumnGroupingTable";
+import MillTable from "../Components/dashboard/MillTable";
 
 const Dashboard = () => {
-    return (
-        <Box
-        sx={{ display: "flex", justifyContent: "center", alignItems: "center" }}
-      >
-        <Typography variant="h1">Dashboard</Typography>
-      </Box>
-    );
+  return (
+    <>
+      <MillTable />
+      <ColumnGroupingTable />
+    </>
+  );
 };
 
 export default Dashboard;
