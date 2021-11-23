@@ -4,12 +4,9 @@ import {
   signOut,
   getAuth,
   getIdToken,
-  updateProfile,
   signInWithPopup,
   GoogleAuthProvider,
   onAuthStateChanged,
-  signInWithEmailAndPassword,
-  createUserWithEmailAndPassword,
 } from "firebase/auth";
 
 //Initialize Firebase Authentication

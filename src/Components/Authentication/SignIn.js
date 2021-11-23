@@ -42,7 +42,7 @@ function Copyright(props) {
 const theme = createTheme();
 
 const SignIn = () => {
-  const { signInUsingGoogle, user } = useAuth();
+  const { signInUsingGoogle } = useAuth();
 
   const navigate = useNavigate();
   const location = useLocation();

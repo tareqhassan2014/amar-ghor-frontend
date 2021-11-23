@@ -62,7 +62,7 @@ const SideDrawer = ({ openDrawer, setOpenDrawer }) => {
               <ListItemText primary="Find" />
             </ListItem>
 
-            <ListItem button>
+            <ListItem button onClick={() => navigate("/dashboard")}>
               <ListItemIcon>
                 <DashboardIcon />
               </ListItemIcon>

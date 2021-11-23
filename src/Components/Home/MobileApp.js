@@ -1,7 +1,6 @@
 import { Container, Grid, Typography, Box } from "@mui/material";
 import LottieComponent from "../../Pages/LottieComponent";
 import homeAnimationData from "../../media/45041-google-play.json";
-import googlePlay from "../../media/27173-googleplay-button.json";
 
 const MobileApp = () => {
   return (
